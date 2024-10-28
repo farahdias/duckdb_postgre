@@ -21,7 +21,7 @@ conn = duckdb.connect('exercise.db')
 conn.execute("""
 INSTALL postgres;
 LOAD postgres;
-ATTACH 'dbname=postgres user=postgres password=Password04! host=127.0.0.1' AS db (TYPE POSTGRES, SCHEMA 'public');
+ATTACH 'dbname=postgres user=postgres password=your_password host=127.0.0.1' AS db (TYPE POSTGRES, SCHEMA 'public');
 """)
 
 

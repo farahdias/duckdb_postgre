@@ -14,7 +14,7 @@ import pandas as pd
 
 
 #specify the path to the file
-path_data = 'C:\\Users\\diasn\\Documents\\medium\\duckdb_postgre\\resources\\data\\'
+path_data = 'path to directory'
 
 
 # In[3]:

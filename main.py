@@ -1,12 +1,13 @@
 import sys
-import os
+import subprocess
 
-# Add the other directory to the system path
-sys.path.append(os.path.join(os.path.dirname(_file_), 'other_directory'))
 
-# Import the other script
-import other_script
-
-if _name_ == '_main_':
-    # Call a function from other_script if needed
-    other_script.some_function()  # Replace with actual function call
+if __name__ == "__main__":
+    # Run main.py using subprocess
+    print("start processing file to duckdb")
+    subprocess.run(['python', 'scripts/python/file_to_duckdb.py'])
+    print("finished file to duckdb")
+    
+    print("start processing duckdb to postgre")
+    subprocess.run(['python', 'scripts/python/duckdb_to_postgre.py'])
+    print("finish duckdb to postgre")
